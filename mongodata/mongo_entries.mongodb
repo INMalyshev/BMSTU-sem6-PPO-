@@ -1,0 +1,22 @@
+use business_mongo;
+
+db.createCollection("role");
+db.createCollection("client");
+db.createCollection("training_plan");
+db.createCollection("excersize_type");
+db.createCollection("approach_plan");
+db.createCollection("training");
+db.createCollection("approach");
+db.createCollection("request");
+
+db.role.insertMany([
+    {"role_id": 1, "name": "Тренер"},
+    {"role_id": 2, "name": "Авторизованный пользователь"},
+]);
+
+db.excersize_type.insertMany([
+    {"excersize_type_id": 1, "name": "Подтягивания"},
+    {"excersize_type_id": 2, "name": "Присядания"},
+    {"excersize_type_id": 3, "name": "Отжимания"},
+]);
+
